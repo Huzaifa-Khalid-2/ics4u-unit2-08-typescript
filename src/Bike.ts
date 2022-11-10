@@ -1,0 +1,41 @@
+/**
+ * The program is the class
+ * for the Boeing 747.
+ *
+ * By:      Huzaifa Khalid
+ * Version: 1.0
+ * Since:   2020-10-19
+ */
+
+import Vehicle from './Vehicle'
+
+class Bike extends Vehicle {
+  private cadence = 0
+
+  // this sets the speed
+  getCadence(): number {
+    return this.cadence
+  }
+
+  // this accelerates the boeing
+  accelerate(appliedPower: number): void {
+    this.cadence = this.cadence + appliedPower
+    super.setSpeed(this.cadence * 2)
+  }
+
+  // This rings the bell
+  ringBell(): void {
+    console.log('Ding ding!')
+  }
+
+  // This shows the status
+  status(): void {
+    super.status()
+    console.log(`
+    ---> Cadence: ${this.cadence}
+    `)
+  }
+
+  // exports file back to main
+}
+export = Bike
