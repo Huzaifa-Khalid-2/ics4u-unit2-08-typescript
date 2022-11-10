@@ -11,38 +11,38 @@ class Vehicle {
   private speed = 0
   private readonly maxSpeed: number
 
-  constructor (color: string, maxSpeed: number) {
+  constructor(color: string, maxSpeed: number) {
     this.color = color
     this.maxSpeed = maxSpeed
   }
 
   // getter method for vehicle color
-  getColor (): string {
+  getColor(): string {
     return this.color
   }
 
   // setter method for vehicle color
-  setColor (userColor: string): void {
+  setColor(userColor: string): void {
     this.color = userColor
   }
 
   // setter method for vehicle speed
-  setSpeed (userSpeed: number): void {
+  setSpeed(userSpeed: number): void {
     this.speed = userSpeed
   }
 
   // getter method for speed
-  getSpeed (): number {
+  getSpeed(): number {
     return this.speed
   }
 
   // getter method for max speed
-  getMaxSpeed (): number {
+  getMaxSpeed(): number {
     return this.maxSpeed
   }
 
   // method for vehicle acceleration
-  accelerate (accelerationPower: number, accelerationTime: number): void {
+  accelerate(accelerationPower: number, accelerationTime: number): void {
     this.speed = accelerationPower * accelerationTime + this.speed
 
     if (this.speed > this.maxSpeed) {
@@ -51,7 +51,7 @@ class Vehicle {
   }
 
   // method for vehicle brake
-  break (breakPower: number, breakTime: number): void {
+  break(breakPower: number, breakTime: number): void {
     this.speed = this.speed - breakPower * breakTime
 
     if (this.speed < 0) {
@@ -60,7 +60,7 @@ class Vehicle {
   }
 
   // this displays the status
-  status (): void {
+  status(): void {
     console.log(`
      ---> Speed: ${this.getSpeed()}
      ---> Max speed: ${this.getMaxSpeed()}
